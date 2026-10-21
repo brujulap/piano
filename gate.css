@@ -1,0 +1,29 @@
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font:16px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#0b0d12;color:#e8eaf0;-webkit-font-smoothing:antialiased}
+#lock{position:fixed;inset:0;display:grid;place-items:center;padding:24px;overflow:hidden;background:radial-gradient(1200px 600px at 20% -10%,#3b2a7a55,transparent),radial-gradient(900px 500px at 110% 110%,#0e749044,transparent),#0b0d12}
+#lock[hidden]{display:none}
+#lock .keysbg{position:absolute;left:0;right:0;bottom:-40px;height:180px;opacity:.10;background:repeating-linear-gradient(90deg,#fff 0 38px,#0b0d12 38px 40px);transform:perspective(500px) rotateX(35deg);transform-origin:bottom}
+#lock .card{position:relative;width:min(380px,100%);padding:32px 28px 24px;border-radius:22px;background:#141823cc;border:1px solid #ffffff14;backdrop-filter:blur(16px);box-shadow:0 30px 80px #0008;animation:rise .6s cubic-bezier(.2,.8,.2,1)}
+@keyframes rise{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+#lock .logo{display:flex;gap:3px;height:46px;margin-bottom:14px}
+#lock .logo span{width:14px;border-radius:0 0 4px 4px;background:linear-gradient(#fff,#d9dce6);animation:press 2.4s infinite ease-in-out}
+#lock .logo span:nth-child(2){animation-delay:.15s}
+#lock .logo span:nth-child(3){animation-delay:.3s}
+#lock .logo span:nth-child(4){animation-delay:.45s}
+#lock .logo span:nth-child(5){animation-delay:.6s}
+@keyframes press{0%,70%,100%{transform:none;background:linear-gradient(#fff,#d9dce6)}35%{transform:translateY(3px);background:linear-gradient(#a78bfa,#7c3aed)}}
+#lock h1{margin:0 0 4px;font-size:30px;letter-spacing:-.02em}
+#lock .muted{color:#9aa3b5;margin:0 0 18px}
+#lock .tiny{font-size:12px;margin:16px 0 0}
+#lock .lbl{display:block;font-size:13px;color:#9aa3b5}
+#lock .field{display:block;width:100%;margin-top:6px;padding:12px 14px;border-radius:12px;border:1px solid #ffffff1f;background:#0b0d12;color:#fff;font-size:16px;outline:none;transition:border .2s,box-shadow .2s}
+#lock .field:focus{border-color:#8b5cf6;box-shadow:0 0 0 4px #8b5cf633}
+#lock .chk{display:flex;gap:8px;align-items:center;margin:14px 0;font-size:14px;color:#c6cbd8}
+#lock .btn{width:100%;padding:12px;border:0;border-radius:12px;background:linear-gradient(135deg,#8b5cf6,#6366f1);color:#fff;font-weight:600;font-size:16px;cursor:pointer;transition:transform .15s,filter .2s}
+#lock .btn:hover{filter:brightness(1.1)}
+#lock .btn:active{transform:scale(.98)}
+#lock .btn:disabled{opacity:.7;cursor:wait}
+#lock #lerr{min-height:20px;margin-top:10px;color:#fca5a5;font-size:14px}
+#lock .shake{animation:shake .4s}
+@keyframes shake{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}

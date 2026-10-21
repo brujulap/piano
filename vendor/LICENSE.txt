@@ -1,0 +1,1 @@
+abcjs (https://github.com/paulrosen/abcjs), MIT License, Copyright (c) Paul Rosen and Gregory Dyke.
