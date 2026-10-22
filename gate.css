@@ -20,10 +20,18 @@ body{font:16px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Rob
 #lock .field{display:block;width:100%;margin-top:6px;padding:12px 14px;border-radius:12px;border:1px solid #ffffff1f;background:#0b0d12;color:#fff;font-size:16px;outline:none;transition:border .2s,box-shadow .2s}
 #lock .field:focus{border-color:#8b5cf6;box-shadow:0 0 0 4px #8b5cf633}
 #lock .chk{display:flex;gap:8px;align-items:center;margin:14px 0;font-size:14px;color:#c6cbd8}
-#lock .btn{width:100%;padding:12px;border:0;border-radius:12px;background:linear-gradient(135deg,#8b5cf6,#6366f1);color:#fff;font-weight:600;font-size:16px;cursor:pointer;transition:transform .15s,filter .2s}
-#lock .btn:hover{filter:brightness(1.1)}
-#lock .btn:active{transform:scale(.98)}
+#lock .btn{width:100%;padding:12px;border:0;border-radius:12px;background:linear-gradient(135deg,#7c3aed,#6366f1);color:#fff;font-weight:600;font-size:16px;cursor:pointer;min-height:48px;transition:transform .15s ease-out,filter .2s}
+@media (hover:hover){#lock .btn:hover{filter:brightness(1.1)}}
+#lock .btn:not(:disabled):active{transform:scale(.96)}
 #lock .btn:disabled{opacity:.7;cursor:wait}
 #lock #lerr{min-height:20px;margin-top:10px;color:#fca5a5;font-size:14px}
 #lock .shake{animation:shake .4s}
 @keyframes shake{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+html{-webkit-tap-highlight-color:transparent}
+#lock .chk input{width:20px;height:20px;accent-color:#8b5cf6}
+#lock .chk{min-height:44px;cursor:pointer}
+#lock :where(button,input[type=checkbox]):focus-visible{outline:2px solid #a78bfa;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){
+#lock .card{animation:fadein .2s ease-out}@keyframes fadein{from{opacity:0}}
+#lock .logo span{animation:none}#lock .shake{animation:none}#lock .btn:not(:disabled):active{transform:none}
+}
