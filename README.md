@@ -9,3 +9,7 @@ Piano Salamander Grand V3, Alexander Holm, CC-BY 3.0 (<https://creativecommons.o
 Los 29 archivos nuevos (Re, Fa, Sol♯ y Si de cada octava que entra en el teclado) salen de la muestra oficial un semitono más aguda: se rebaja el tono con un remuestreo de alta calidad y se codifica a MP3 44,1 kHz, estéreo conjunto, VBR cerca de 40 kb/s, en la misma línea que los originales. Así, al tocar, la afinación queda en un semitono como máximo. Misma licencia: hay que citar a Alexander Holm.
 
 abcjs se usa bajo licencia MIT.
+
+## Biblioteca
+
+El paquete cifrado de la app suma cinco piezas de dominio público, con arreglos simples en los niveles que ya existen: María tenía un corderito, Noche de paz, Cuando los santos, Musette en Re (primera parte) y la Canción de cuna de Brahms. El progreso por canción (veces practicada, mejor precisión y fecha) ya se guarda en este dispositivo.
